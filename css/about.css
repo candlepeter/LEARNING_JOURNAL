@@ -1,163 +1,163 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, 
+html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /* Layout */
 .container {
-    min-width: 414px;
+  min-width: 414px;
 }
 
-header, ul {
-    display: flex;
-    padding: 0 1em;
+header,
+ul {
+  display: flex;
+  padding: 0 1em;
 }
 
-header { 
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 900;
+header {
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 900;
 }
 
 ul li {
-    list-style: none;
-    margin-left: 2em;
-    font-size: 0.75rem;
+  list-style: none;
+  margin-left: 2em;
+  font-size: 0.75rem;
 }
 
 .blog-section,
 .personal-section,
 .article-section {
-    padding: 0.5em 1em;
+  padding: 0.5em 1em;
 }
 
 .personal-section img {
-    width: 182px;
-    height: 182px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 0.5em;
-    box-shadow: 0px 0px 3px #202020;
+  width: 182px;
+  height: 182px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 0.5em;
+  box-shadow: 0px 0px 3px #202020;
 }
 
 .blog-card img {
-    width: 100%;
-    height: 232px;
-    object-fit: cover;
-    margin-top: 1em;
+  width: 100%;
+  height: 232px;
+  object-fit: cover;
+  margin-top: 1em;
 }
 
 .blog-section h4 {
-    margin-top: 0;
-    text-align: center;
+  margin-top: 0;
+  text-align: center;
 }
 
 .article-section h4 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 footer {
-    text-align: center;
-    background-color: #202020;
-    padding: 1.5em 0;
-    color: #ECECEC;
-    font-size: 0.75rem;
-    font-weight: bold;
+  text-align: center;
+  background-color: #202020;
+  padding: 1.5em 0;
+  color: #ececec;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
 
 /* typography */
 .blog-card h3 {
-    margin: 0.2em 0;
+  margin: 0.2em 0;
 }
 
 .personal-section-detail h3 {
-    font-size: 2.18rem;
-    margin: 0.5em 0;
+  font-size: 2.18rem;
+  margin: 0.5em 0;
 }
 
 .personal-section-detail p,
 .blog-card p {
-    font-size: 1rem;
-    line-height: 1.25em;
-    margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.25em;
+  margin-top: 0;
 }
 
 .blog-card span {
-    display: block;
-    font-size: 0.92rem;
-    margin-top: 0.5em;
-    margin-bottom: 0;
+  display: block;
+  font-size: 0.92rem;
+  margin-top: 0.5em;
+  margin-bottom: 0;
 }
 
 .blog-card h3 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 footer span {
-    display: block;
-    color: #D7D7D7;
-    font-weight: normal;
+  display: block;
+  color: #d7d7d7;
+  font-weight: normal;
 }
 
 /* links */
 li a {
-    text-decoration: none;
-    color: #090909;
-    cursor: pointer;
-    font-weight: bold;
+  text-decoration: none;
+  color: #090909;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 li a {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* media queries */
 @media (min-width: 768px) {
-    .personal-section-detail {
-        display: grid;
-        grid-template-areas: 
-        "img title title"
-        "img detail detail";
-        grid-column-gap: 1.2em;
-        /* padding: 0 1em 1em 2em; */
-    }
-    
-    .personal-section-detail img {
-        grid-area: img;
-    }
-    
-    .personal-section-detail h3 {
-        grid-area: title;
-        font-size: 2.25rem;
-        margin-bottom: 0;
-    }
-    
-    .personal-section-detail p {
-        grid-area: detail;
-    }
-    
-    .article-section {
-        padding: 0 2em 0 4em;
-        margin-top: 2em;
-    }
-    
-    .blog-section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 1em;
-    }
-    
-    .blog-section h4 {
-        grid-column: 1 / -1;
-    }
+  .personal-section-detail {
+    max-width: 80%;
+    display: grid;
+    grid-template-areas:
+      "img title title"
+      "img detail detail";
+    grid-column-gap: 1.2em;
+    /* padding: 0 1em 1em 2em; */
+  }
+
+  .personal-section-detail img {
+    grid-area: img;
+  }
+
+  .personal-section-detail h3 {
+    grid-area: title;
+    font-size: 2.25rem;
+    margin-bottom: 0;
+  }
+
+  .personal-section-detail p {
+    grid-area: detail;
+  }
+
+  .article-section {
+    padding: 0 2em 0 4em;
+    margin-top: 2em;
+  }
+
+  .blog-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+  }
+
+  .blog-section h4 {
+    grid-column: 1 / -1;
+  }
 }
-
-
