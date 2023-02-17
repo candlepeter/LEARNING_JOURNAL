@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Layout */
+.container {
+    min-width: 414px;
+}
+
+header, ul {
+    display: flex;
+    padding: 0 1em;
+}
+
+header { 
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 900;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 2em;
+    font-size: 0.75rem;
+}
+
+.hero-section {
+    background: url("./images/main-img.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    min-height: 293px;
+    position: relative;
+    object-fit: cover;
+}
+
+.hero-section-detail {
+    max-width: 657px;
+    position: absolute;
+    bottom: 0;
+    padding: 0 1em;
+}
+
+.blog-section {
+    padding: 1em;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 232px;
+    object-fit: cover;
+    margin-top: 1em;
+}
+
+footer {
+    text-align: center;
+    background-color: #202020;
+    padding: 1.5em 0;
+    color: #ECECEC;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* typography */
+.hero-section-detail h3,
+.blog-card h3 {
+    margin: 0.2em 0;
+}
+.hero-section-detail span {
+    font-size: 0.75rem;
+}
+
+.hero-section-detail h3 {
+    font-size: 2rem;
+    /* font-weight: bolder; */
+}
+
+.hero-section-detail p,
+.blog-card p {
+    font-size: 1rem;
+    line-height: 1.25em;
+    margin-top: 0;
+}
+
+.blog-card span {
+    display: block;
+    font-size: 0.92rem;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.blog-card h3 {
+    font-size: 1.5rem;
+}
+
+footer span {
+    display: block;
+    color: #D7D7D7;
+    font-weight: normal;
+}
+
+/* links */
+li a,
+.blog-section a {
+    text-decoration: none;
+    color: #090909;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+li a {
+    text-transform: uppercase;
+}
+
+.blog-section a {
+    display: block;
+    font-size: 0.92rem;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+    .blog-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1em;
+    }
+    
+    .hero-section-detail {
+        padding: 0 1em 1em 2em;
+    }
+    
+    .blog-section a {
+        grid-column: 1 / -1;
+    }
+}
+
+
